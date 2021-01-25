@@ -13,7 +13,7 @@ class HeaderComponent extends Component {
         <div class="brand">
             <div class="logo"></div>
 
-            <div>${this.translate['common.slogan']}</div>
+            <div class="slogan">${this.translate['common.slogan']}</div>
         </div>
 
         <div class="key-factors">

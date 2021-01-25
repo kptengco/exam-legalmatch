@@ -1,14 +1,13 @@
 .header-component {
+    align-items: center;
     display: flex;
+    padding: 15px 6em;
 }
 
 .header-component .brand {
+    align-items: center;
     display: flex;
-    flex-basis: 80%;
-}
-
-.header-component .key-factors {
-    flex-basis: 20%;
+    flex: 1;
 }
 
 .header-component .brand .logo {
@@ -16,8 +15,13 @@
     background-repeat: no-repeat;
     background-size: contain;;
     min-height: 50px;
-    max-width: 290px;
+    max-width: 230px;
     width: 100%;
+}
+
+.header-component .brand .slogan {
+    color: var(--primary-color);
+    padding: 4px 0 0 20px;
 }
 
 .header-component .key-factors {
