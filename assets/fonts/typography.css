@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url('gotham-yaro/src/Gotham-Light.eot');
+    src: url('gotham-yaro/src/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+        url('gotham-yaro/src/Gotham-Light.woff2') format('woff2'),
+        url('gotham-yaro/src/Gotham-Light.woff') format('woff'),
+        url('gotham-yaro/src/Gotham-Light.ttf') format('truetype'),
+        url('gotham-yaro/src/Gotham-Light.svg#Gotham-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('gotham-yaro/src/Gotham-Medium.eot');
+    src: url('gotham-yaro/src/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+        url('gotham-yaro/src/Gotham-Medium.woff2') format('woff2'),
+        url('gotham-yaro/src/Gotham-Medium.woff') format('woff'),
+        url('gotham-yaro/src/Gotham-Medium.ttf') format('truetype'),
+        url('gotham-yaro/src/Gotham-Medium.svg#Gotham-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('gotham-yaro/src/Gotham-Book.eot');
+    src: url('gotham-yaro/src/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+        url('gotham-yaro/src/Gotham-Book.woff2') format('woff2'),
+        url('gotham-yaro/src/Gotham-Book.woff') format('woff'),
+        url('gotham-yaro/src/Gotham-Book.ttf') format('truetype'),
+        url('gotham-yaro/src/Gotham-Book.svg#Gotham-Book') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('gotham-yaro/src/Gotham-BookItalic.eot');
+    src: url('gotham-yaro/src/Gotham-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('gotham-yaro/src/Gotham-BookItalic.woff2') format('woff2'),
+        url('gotham-yaro/src/Gotham-BookItalic.woff') format('woff'),
+        url('gotham-yaro/src/Gotham-BookItalic.ttf') format('truetype'),
+        url('gotham-yaro/src/Gotham-BookItalic.svg#Gotham-BookItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
