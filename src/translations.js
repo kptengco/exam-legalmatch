@@ -8,4 +8,8 @@ const TRANSLATIONS = {
     'page.userAgreement': 'User Agreement',
     'page.privacyPolicy': 'Privacy Policy',
     'page.siteMap': 'Site Map',
+    'home.findALawyer': 'Find a Lawyer for your Legal Issue',
+    'home.keyFactors': 'Fast, Free and Confidential',
+    'home.findLocation': 'Enter Zip Code or City:',
+    'home.findLocationLabel': 'Does not have to be where you live',
 };

@@ -1,0 +1,25 @@
+.home-component {
+    background-color: var(--primary-color);
+    display: flex;
+    min-height: 500px;
+    position: relative;
+}
+
+.home-component .bg {
+    background-image: url('../../../../assets/images/background/glow.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.home-component .home-section {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+}
