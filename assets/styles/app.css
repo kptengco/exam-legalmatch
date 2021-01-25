@@ -1,12 +1,19 @@
 @import url('../themes/default.css');
 @import url('modules/header/index.css');
 
+@import url('../styles/modules/footer/index.css');
+
 body, html {
     color: var(--secondary-text-color);
     font-family: 'Gotham', Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+p {
     margin: 0;
     padding: 0;
 }

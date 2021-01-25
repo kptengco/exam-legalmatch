@@ -1,0 +1,79 @@
+.footer-component {
+    color: var(--tertiary-strong-text-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 6em;
+}
+
+.footer-component .brand,
+.footer-component .links,
+.footer-component .license {
+    flex: 1;
+}
+
+.footer-component .brand .logo {
+    background-image: url('../../../../assets/images/logo/logo-c.png');
+    background-repeat: no-repeat;
+    background-size: contain;;
+    min-height: 50px;
+    max-width: 230px;
+    width: 100%;
+}
+
+.footer-component .brand .slogan {
+    color: var(--secondary-text-color);
+}
+
+.footer-component .links .nav-menu {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 2em 0;
+}
+
+.footer-component .menu-item a {
+    color: var(--tertiary-strong-text-color);
+    text-decoration: none;
+}
+
+.footer-component .nav-menu .menu-item {
+    padding: 0 10px 0 0;
+}
+
+.footer-component .menu-item .divider {
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 10px 0 0;
+    vertical-align: middle;
+}
+
+.footer-component .menu-item:first-child .divider {
+    display: none;
+}
+
+.footer-component .links .copyright {
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-component .license .truste,
+.footer-component .license .bbb {
+    background-position: 85%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 10px 0;
+    min-height: 50px;
+    width: 100%;
+}
+
+.footer-component .license .truste {
+    background-image: url('../../../../assets/images/misc/truste.png');
+    min-height: 40px;
+}
+
+.footer-component .license .bbb {
+    background-image: url('../../../../assets/images/misc/bbb.png');
+    min-height: 70px;
+}
