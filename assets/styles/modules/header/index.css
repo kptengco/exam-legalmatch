@@ -1,0 +1,36 @@
+.header-component {
+    display: flex;
+}
+
+.header-component .brand {
+    display: flex;
+    flex-basis: 80%;
+}
+
+.header-component .key-factors {
+    flex-basis: 20%;
+}
+
+.header-component .brand .logo {
+    background-image: url('../../../../assets/images/logo/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;;
+    min-height: 50px;
+    max-width: 290px;
+    width: 100%;
+}
+
+.header-component .key-factors {
+    justify-content: flex-end;
+}
+
+.header-component .key-factors .factors {
+    font-weight: 300;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-component .factors .icon-ok {
+    color: var(--success);
+}
