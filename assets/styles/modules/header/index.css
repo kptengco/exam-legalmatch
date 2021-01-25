@@ -1,0 +1,40 @@
+.header-component {
+    align-items: center;
+    display: flex;
+    padding: 15px 6em;
+}
+
+.header-component .brand {
+    align-items: center;
+    display: flex;
+    flex: 1;
+}
+
+.header-component .brand .logo {
+    background-image: url('../../../../assets/images/logo/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;;
+    min-height: 50px;
+    max-width: 230px;
+    width: 100%;
+}
+
+.header-component .brand .slogan {
+    color: var(--primary-color);
+    padding: 4px 0 0 20px;
+}
+
+.header-component .key-factors {
+    justify-content: flex-end;
+}
+
+.header-component .key-factors .factors {
+    font-weight: 300;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-component .factors .icon-ok {
+    color: var(--success);
+}
