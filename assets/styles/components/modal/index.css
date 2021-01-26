@@ -1,0 +1,68 @@
+.modal-component {
+    display: none;
+}
+
+.modal-component.open {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.modal-component .backdrop {
+    background-color: rgba(0,0,0,.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.modal-component .modal-container {
+    background-color: var(--tertiary-color);
+    border-radius: 4px;
+    min-height: 300px;
+    min-width: 500px;
+    padding: 10px 20px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.modal-component .modal-container .modal-header {
+    align-items: center;
+    display: flex;
+}
+
+.modal-component .modal-header .modal-heading {
+    flex: 1;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.modal-component .modal-header .modal-close-icon {
+    color: var(--tertiary-strong-text-color);
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.modal-component .modal-container .modal-footer {
+    bottom: 20px;
+    font-weight: 600;
+    position: absolute;
+    text-align: right;
+    text-transform: uppercase;
+    width: calc(100% - 40px);
+}
+
+.modal-component .modal-footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}

@@ -13,6 +13,10 @@ class ClientReviewItemComponent extends Component {
         };
     }
 
+    get translate() {
+        return TRANSLATIONS;
+    }
+
     get componentSelector() {
         return 'review-item-component';
     }
@@ -54,6 +58,16 @@ class ClientReviewItemComponent extends Component {
         super.render();
 
         this.findElement('[rating]').appendChild(ratingComponent.domNode);
+
+        this.findElement('.view-more').addEventListener('click', () => {
+            const t = document.createElement('div');
+            t.innerHTML = 'hello world';
+
+            modalComponent.open({
+                heading: this.translate['review.modal.clientReviews'],
+                componentNode: t
+            });
+        });
     }
 }
 
@@ -84,34 +98,7 @@ class ClientReviewComponent extends Component {
     render() {
         super.render();
 
-        const mockClientReviewData = [
-            {
-                image: 'assets/images/lawyers/f5e75165-704b-4864-a98c-bdb0c856ae0f.png',
-                name: 'Mitchell M.',
-                location: 'Cherry Hill, NJ',
-                rating: 5,
-                category: 'Family Law',
-                review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ligula sed turpis sollicitudin fringilla. Vestibulum fermentum justo dui. Donec id ullamcorper lacus, ut accumsan orci.'
-            },
-            {
-                image: 'assets/images/lawyers/ac9af587-5b36-4de7-992d-020f9c8badec .png',
-                name: 'Joel C.',
-                location: 'Little Rock, AK',
-                rating: 5,
-                category: 'Job & Employment Law',
-                review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ligula sed turpis sollicitudin fringilla. Vestibulum fermentum justo dui. Donec id ullamcorper lacus, ut accumsan orci.'
-            },
-            {
-                image: 'assets/images/lawyers/91442921-e7ec-4748-a04b-e3dc8678c54a.png',
-                name: 'Brigida R.',
-                location: 'Dallas, TX',
-                rating: 5,
-                category: 'Family Law',
-                review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ligula sed turpis sollicitudin fringilla. Vestibulum fermentum justo dui. Donec id ullamcorper lacus, ut accumsan orci.'
-            }
-        ];
-
-        for (const item of mockClientReviewData) {
+        for (const item of REVIEW.HIGHLIGHTS) {
             const clientReviewItemComponent = new ClientReviewItemComponent(item);
             clientReviewItemComponent.compile();
             this.reviewItemNode.appendChild(clientReviewItemComponent.domNode);
