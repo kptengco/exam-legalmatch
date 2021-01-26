@@ -13,6 +13,10 @@ class Component {
         throw new Error('implement this');
     }
 
+    findElement(selector) {
+        return this.domNode.querySelector(selector);
+    }
+
     render() {
         this.domNode.innerHTML = this.template;
     }
