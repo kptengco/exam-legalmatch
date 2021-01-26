@@ -1,3 +1,129 @@
+class ClientAllReviewComponent extends Component {
+
+    constructor(model) {
+        super();
+
+        if (!model) {
+            throw new Error('model is required.');
+        }
+
+        this.model = model;
+    }
+
+    get componentSelector() {
+        return 'client-all-review-component';
+    }
+
+    get translate() {
+        return TRANSLATIONS;
+    }
+
+    get clientRatingsNode() {
+        return this.findElement('[client-ratings]');
+    }
+
+    get clientReviewsNode() {
+        return this.findElement('[client-reviews]');
+    }
+
+    get template() {
+        return `
+            <div class="lawyer-info">
+                <div class="lawyer-pic">
+                    <img class="lawyer-pic"
+                        src="${this.model.image}"
+                        alt="" />
+                </div>
+                <div class="lawyer-details">
+                    <span class="lawyer-name">${this.model.name}</span>
+                    <span class="lawyer-location">${this.model.location}</span>
+                    <span class="category">${this.model.category}</span>
+                </div>
+            </div>
+
+            <div class="client-overall-rating">
+                <span class="rating-label">${this.translate['common.rating']}</span>
+                <span class="users-count">(${this.model.numberOfUsersRated} ${this.translate['common.users']})</span>
+                <div overall-rating-overview="" class="overall-rating-overview"></div>
+            </div>
+
+            <div class="client-ratings-container" client-ratings="">
+                <div class="client-rating">
+                    <div class="rating-description">${this.translate['common.overAll']}</div>
+                    <div overall-rating="" class="rating"></div>
+                </div>
+            </div>
+
+            <div class="client-reviews" client-reviews=""></div>
+        `;
+    }
+
+    generateRatingNode(item) {
+        const rating = new RatingComponent(item.rating);
+        rating.compile();
+
+        const div = document.createElement('div');
+        div.classList.add('client-rating');
+        div.innerHTML = `
+            <div class="rating-description">${item.description}</div>
+            <div overall-rating="" class="rating"></div>
+        `;
+
+        div.querySelector('[overall-rating]').appendChild(rating.domNode);
+
+        return div;
+    }
+
+    generateReviewNode(item) {
+        const rating = new RatingComponent(item.rating);
+        rating.compile();
+
+        const dateRated = new Date(item.date);
+        const displayDate = dateRated.toLocaleString('en-US', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        });
+
+        const div = document.createElement('div');
+        div.classList.add('client-review');
+        div.innerHTML = `
+            <div class="review-overview">
+                <div overall-rating="" class="rating"></div>
+                <div class="review-by">${this.translate['common.by']} ${item.name}, ${displayDate}</div>
+            </div>
+
+            <div class="review-detail">
+                <p>${item.description}</p>
+            </div>
+        `;
+
+        div.querySelector('[overall-rating]').appendChild(rating.domNode);
+
+        return div;
+    }
+
+    render() {
+        super.render();
+
+        let overAllRating = new RatingComponent(this.model.overallRating);
+        overAllRating.compile();
+        this.findElement('[overall-rating-overview]').appendChild(overAllRating.domNode);
+
+        overAllRating = new RatingComponent(this.model.overallRating);
+        overAllRating.compile();
+        this.findElement('[overall-rating]').appendChild(overAllRating.domNode);
+
+        for (const item of this.model.rating) {
+            this.clientRatingsNode.appendChild(this.generateRatingNode(item));
+        }
+
+        for (const item of this.model.review) {
+            this.clientReviewsNode.appendChild(this.generateReviewNode(item));
+        }
+    }
+}
+
 class ClientReviewItemComponent extends Component {
 
     constructor(model) {
@@ -11,6 +137,10 @@ class ClientReviewItemComponent extends Component {
             category: null,
             rating: 0
         };
+    }
+
+    get translate() {
+        return TRANSLATIONS;
     }
 
     get componentSelector() {
@@ -54,6 +184,24 @@ class ClientReviewItemComponent extends Component {
         super.render();
 
         this.findElement('[rating]').appendChild(ratingComponent.domNode);
+
+        this.findElement('.view-more').addEventListener('click', () => {
+            const review = REVIEW.MODAL.filter(data => data.id === this.model.id);
+
+            const clientAllReviewComponent = new ClientAllReviewComponent({
+                image: this.model.image,
+                name: this.model.name,
+                location: this.model.location,
+                category: this.model.category,
+                ...review.pop()
+            });
+            clientAllReviewComponent.compile();
+
+            modalComponent.open({
+                heading: this.translate['review.modal.clientReviews'],
+                componentNode: clientAllReviewComponent.domNode
+            });
+        });
     }
 }
 
@@ -84,34 +232,7 @@ class ClientReviewComponent extends Component {
     render() {
         super.render();
 
-        const mockClientReviewData = [
-            {
-                image: 'assets/images/lawyers/f5e75165-704b-4864-a98c-bdb0c856ae0f.png',
-                name: 'Mitchell M.',
-                location: 'Cherry Hill, NJ',
-                rating: 5,
-                category: 'Family Law',
-                review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ligula sed turpis sollicitudin fringilla. Vestibulum fermentum justo dui. Donec id ullamcorper lacus, ut accumsan orci.'
-            },
-            {
-                image: 'assets/images/lawyers/ac9af587-5b36-4de7-992d-020f9c8badec .png',
-                name: 'Joel C.',
-                location: 'Little Rock, AK',
-                rating: 5,
-                category: 'Job & Employment Law',
-                review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ligula sed turpis sollicitudin fringilla. Vestibulum fermentum justo dui. Donec id ullamcorper lacus, ut accumsan orci.'
-            },
-            {
-                image: 'assets/images/lawyers/91442921-e7ec-4748-a04b-e3dc8678c54a.png',
-                name: 'Brigida R.',
-                location: 'Dallas, TX',
-                rating: 5,
-                category: 'Family Law',
-                review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ligula sed turpis sollicitudin fringilla. Vestibulum fermentum justo dui. Donec id ullamcorper lacus, ut accumsan orci.'
-            }
-        ];
-
-        for (const item of mockClientReviewData) {
+        for (const item of REVIEW.HIGHLIGHTS) {
             const clientReviewItemComponent = new ClientReviewItemComponent(item);
             clientReviewItemComponent.compile();
             this.reviewItemNode.appendChild(clientReviewItemComponent.domNode);

@@ -1,0 +1,96 @@
+.client-all-review-component {
+    font-weight: 600;
+}
+
+.client-all-review-component .lawyer-info {
+    align-items: center;
+    border-top: solid 1px var(--secondary-medium-text-color);
+    display: flex;
+    line-height: 1.25;
+    padding: 20px 0;
+}
+
+.client-all-review-component .lawyer-info .lawyer-pic {
+    margin-right: 15px;
+}
+
+.client-all-review-component .lawyer-info .lawyer-details {
+    font-size: 16px;
+}
+
+.client-all-review-component .lawyer-details .lawyer-name,
+.client-all-review-component .lawyer-details .lawyer-location,
+.client-all-review-component .lawyer-details .category {
+    display: block;
+}
+
+.client-all-review-component .lawyer-details .lawyer-name {
+    font-size: 26px;
+}
+
+.client-all-review-component .lawyer-details .lawyer-location {
+    color: var(--tertiary-strong-text-color);
+}
+
+.client-all-review-component .client-overall-rating {
+    align-items: flex-end;
+    border-bottom: solid 1px var(--secondary-medium-text-color);
+    display: flex;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.client-all-review-component .client-overall-rating .rating-label {
+    font-size: 22px;
+}
+
+.client-all-review-component .client-overall-rating .users-count {
+    text-transform: lowercase;
+}
+
+.client-all-review-component .client-overall-rating .rating-label,
+.client-all-review-component .client-overall-rating .users-count,
+.client-all-review-component .client-overall-rating .overall-rating-overview {
+    padding: 0 7px 0 0;
+}
+
+.client-all-review-component .client-ratings-container {
+    border-bottom: solid 1px var(--secondary-medium-text-color);
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 15px 0;
+}
+
+.client-all-review-component .client-ratings-container .client-rating {
+    display: flex;
+}
+
+.client-all-review-component .client-rating:first-child .rating-description {
+    font-weight: 500;
+}
+
+.client-all-review-component .client-rating .rating-description {
+    flex: 1;
+}
+
+.client-all-review-component .client-rating .rating {
+    padding-right: 40px;
+}
+
+.client-all-review-component .client-review {
+    padding: 20px 0;
+}
+
+.client-all-review-component .client-review .review-overview {
+    align-items: center;
+    display: flex;
+    font-weight: 500;
+}
+
+.client-all-review-component .client-review .review-by {
+    padding-left: 10px;
+}
+
+.client-all-review-component .client-review .review-detail {
+    padding: 10px 0;
+}

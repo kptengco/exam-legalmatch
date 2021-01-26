@@ -6,6 +6,11 @@ const TRANSLATIONS = {
     'common.slogan': 'FIND THE RIGHT LAWYER NOW',
     'common.copyrightText': 'Copyright 1999-2021 LegalMatch. All Rights reserved. LegalMatch &copy;, the LegalMatch logo, and the tradedress are trademarks of LegalMatch. Patents Pending.',
     'common.clickHere': 'Click here.',
+    'common.close': 'Close',
+    'common.rating': 'Rating',
+    'common.users': 'Users',
+    'common.overAll': 'Overall',
+    'common.by': 'by',
     'page.userAgreement': 'User Agreement',
     'page.privacyPolicy': 'Privacy Policy',
     'page.siteMap': 'Site Map',
@@ -16,5 +21,6 @@ const TRANSLATIONS = {
     'home.chooseCategory': 'Choose a category:',
     'home.chooseCategoryLabel': 'Click to choose a legal category',
     'home.categoryHelper': "Can't find your category?",
-    'review.clientReviews': 'Clients review LegalMatch lawyers'
+    'review.clientReviews': 'Clients review LegalMatch lawyers',
+    'review.modal.clientReviews': 'CLIENT REVIEWS'
 };
