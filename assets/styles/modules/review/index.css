@@ -1,3 +1,5 @@
+@import url('./modal.css');
+
 .client-review-component .review-item {
     display: flex;
     padding: 20px 10px;
@@ -82,12 +84,4 @@
 
 .client-review-component .rating-component  {
     padding-left: 20px;
-}
-
-.client-review-component .rating-component .icon-star {
-    color: var(--tertiary-strong-text-color);
-}
-
-.client-review-component .rating-component .icon-star.starred  {
-    color: var(--quaternary-medium-color);
 }

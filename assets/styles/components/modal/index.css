@@ -28,8 +28,9 @@
     background-color: var(--tertiary-color);
     border-radius: 4px;
     min-height: 300px;
+    max-width: 500px;
     min-width: 500px;
-    padding: 10px 20px 20px;
+    padding: 10px 40px 20px;
     position: relative;
     z-index: 2;
 }
@@ -53,13 +54,19 @@
     text-transform: uppercase;
 }
 
+.modal-component .modal-container .modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 40px;
+}
+
 .modal-component .modal-container .modal-footer {
     bottom: 20px;
     font-weight: 600;
     position: absolute;
     text-align: right;
     text-transform: uppercase;
-    width: calc(100% - 40px);
+    width: calc(100% - 60px);
 }
 
 .modal-component .modal-footer a {

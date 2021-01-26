@@ -159,6 +159,14 @@ const REVIEW = {
                 {
                     description: 'Would recommend to friend',
                     rating: 5
+                },
+                {
+                    description: 'Test 1',
+                    rating: 3
+                },
+                {
+                    description: 'Test 2',
+                    rating: 5
                 }
             ],
             review: [
