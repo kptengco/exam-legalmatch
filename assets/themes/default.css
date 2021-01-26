@@ -1,11 +1,14 @@
 :root {
     --primary-color: #032C6B;
+    --accent-color: #0000FF;
     --secondary-color: #D68D00;
     --tertiary-color: #FFF;
     --quaternary-color: #FBD243;
 
     --primary-text-color: #FFF;
     --secondary-text-color: #000;
+    --secondary-light-text-color: #666;
+    --secondary-medium-text-color: #888;
     --tertiary-text-color: #E4E4E4;
     --tertiary-medium-text-color: #DADADA;
     --tertiary-strong-text-color: #929BA4;

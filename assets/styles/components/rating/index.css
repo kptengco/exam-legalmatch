@@ -1,0 +1,11 @@
+.rating-component {
+    display: flex;
+}
+
+.rating-component .icon-star {
+    color: var(--secondary-light-text-color);
+}
+
+.rating-component .icon-star.starred  {
+    color: var(--quaternary-medium-color);
+}

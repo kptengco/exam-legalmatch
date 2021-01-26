@@ -1,4 +1,6 @@
 @import url('../themes/default.css');
+@import url('components/rating/index.css');
+@import url('components/modal/index.css');
 @import url('modules/header/index.css');
 @import url('modules/footer/index.css');
 @import url('modules/review/index.css');
