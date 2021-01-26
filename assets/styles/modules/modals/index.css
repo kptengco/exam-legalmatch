@@ -1,0 +1,54 @@
+.modal-sub-category-component .list {
+    display: grid;
+    font-weight: 600;
+    grid-template-columns: auto auto;
+    grid-row-gap: 1em;
+}
+
+.modal-sub-category-component .list-item label {
+    display: flex;
+    cursor: pointer;
+}
+
+.modal-sub-category-component .list .cb-input {
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.modal-sub-category-component .btn-find-lawyer {
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 4em;
+    color: var(--tertiary-color);
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    padding: 20px 40px;
+}
+
+.modal-sub-category-component .heading {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0 30px;
+}
+
+.modal-sub-category-component .heading .heading-indicator {
+    background-color: var(--secondary-color);
+    border-radius: 6em;
+    color: var(--primary-text-color);
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+    padding: 4px 10px;
+    vertical-align: middle;
+}
+
+.modal-sub-category-component .heading .highlight {
+    font-weight: 500;
+}
+
+.modal-sub-category-component .btn-actions {
+    margin: 50px auto 10px;
+    text-align: center;
+}

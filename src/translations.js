@@ -22,5 +22,7 @@ const TRANSLATIONS = {
     'home.chooseCategoryLabel': 'Click to choose a legal category',
     'home.categoryHelper': "Can't find your category?",
     'review.clientReviews': 'Clients review LegalMatch lawyers',
-    'review.modal.clientReviews': 'CLIENT REVIEWS'
+    'review.modal.clientReviews': 'CLIENT REVIEWS',
+    'modal.category.findALawyer': 'FIND A LAWYER NOW',
+    'modal.category.heading': 'Which __category__ issue(s) apply to your case?'
 };
