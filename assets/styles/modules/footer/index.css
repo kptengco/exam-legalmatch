@@ -1,6 +1,7 @@
 .footer-component {
     color: var(--tertiary-strong-text-color);
     display: flex;
+    font-weight: 600;
     justify-content: space-between;
     padding: 1em 6em;
 }
@@ -21,7 +22,7 @@
 }
 
 .footer-component .brand .slogan {
-    color: var(--secondary-text-color);
+    color: var(--primary-color);
 }
 
 .footer-component .links .nav-menu {

@@ -33,7 +33,7 @@ class FooterComponent extends Component {
             </ul>
 
             <div class="copyright">
-                <small>${this.translate['common.copyrightText']}</small>
+                <span>${this.translate['common.copyrightText']}</span>
             </div>
         </div>
 
