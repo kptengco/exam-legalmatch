@@ -31,13 +31,7 @@ class ClientReviewItemComponent extends Component {
             <div class="client-review-description">
                 <div class="client-rating">
                     <div class="category">${this.model.category}</div>
-                    <div class="rating">
-                        <span class="icon-star"></span>
-                        <span class="icon-star"></span>
-                        <span class="icon-star"></span>
-                        <span class="icon-star"></span>
-                        <span class="icon-star"></span>
-                    </div>
+                    <div rating=""></div>
                 </div>
 
                 <div class="review-description">
@@ -51,6 +45,15 @@ class ClientReviewItemComponent extends Component {
             </div>
         </div>
         `;
+    }
+
+    render() {
+        const ratingComponent = new RatingComponent(this.model.rating);
+        ratingComponent.compile();
+
+        super.render();
+
+        this.findElement('[rating]').appendChild(ratingComponent.domNode);
     }
 }
 

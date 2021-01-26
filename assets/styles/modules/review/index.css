@@ -80,7 +80,14 @@
     -webkit-font-smoothing: unset;
 }
 
-.client-review-component .client-rating .rating {
-    color: var(--quaternary-medium-color);
+.client-review-component .rating-component  {
     padding-left: 20px;
+}
+
+.client-review-component .rating-component .icon-star {
+    color: var(--tertiary-strong-text-color);
+}
+
+.client-review-component .rating-component .icon-star.starred  {
+    color: var(--quaternary-medium-color);
 }
