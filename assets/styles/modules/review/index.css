@@ -1,0 +1,86 @@
+.client-review-component .review-item {
+    display: flex;
+    padding: 20px 10px;
+}
+
+.client-review-component .review-item-component {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.client-review-component .review-item-component::after {
+    bottom: 0;
+    border-bottom: solid 1px var(--tertiary-strong-text-color);
+    content: ' ';
+    position: absolute;
+    width: 93.5%;
+}
+
+.client-review-component .review-item-component:last-child::after {
+    display: none;
+}
+
+.client-review-component .review-item .lawyer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.client-review-component .lawyer-info .lawyer-location {
+    color: var(--tertiary-medium-text-color);
+    font-size: 12px;
+}
+
+.client-review-component .lawyer-info .lawyer-pic {
+    margin-bottom: 10px;
+}
+
+.client-review-component .lawyer-info .lawyer-name {
+    line-height: 1;
+}
+
+.client-review-component .client-review-description {
+    padding: 0 15px;
+}
+
+.client-review-component .client-review-description .review-description {
+    color: var(--tertiary-text-color);
+    display: -webkit-box;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 600;
+    margin: 10px 0;
+    overflow: hidden;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.client-review-component .review-description .description::before {
+    content: '"'
+}
+
+.client-review-component .client-review-description .client-rating {
+    display: flex;
+}
+
+.client-review-component .client-review-description .view-more {
+    color: var(--quaternary-text-color);
+    cursor: pointer;
+    font-size: 12px;
+    text-align: right;
+}
+
+.client-review-component .view-more .icon-book {
+    font-size: 14px;
+}
+
+.client-review-component .view-more .icon-book::before {
+    -webkit-font-smoothing: unset;
+}
+
+.client-review-component .client-rating .rating {
+    color: var(--quaternary-medium-color);
+    padding-left: 20px;
+}

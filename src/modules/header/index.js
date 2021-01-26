@@ -37,6 +37,6 @@ class HeaderComponent extends Component {
 }
 
 const headerComponent = new HeaderComponent();
+headerComponent.compile();
 
 document.querySelector('#root').appendChild(headerComponent.domNode);
-headerComponent.compile();

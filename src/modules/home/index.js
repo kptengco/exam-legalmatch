@@ -61,54 +61,22 @@ class HomeComponent extends Component {
                     </div>
                 </div>
 
-                <div class="client-reviews" client-reviews="">
-                    <div class="client-review-component">
-                        <div class="heading">
-                            <div class="sub-label">${this.translate['review.clientReviews']}</div>
-                        </div>
-
-                        <div class="reviews">
-                            <div class="review-item">
-                                <div class="lawyer-info">
-                                    <img class="lawyer-pic"
-                                        src="assets/images/lawyers/f5e75165-704b-4864-a98c-bdb0c856ae0f.png"
-                                        alt="" />
-                                    <span class="lawyer-name">Mitchell M.</span>
-                                    <span class="lawyer-location">Cherry Hill, NJ</span>
-                                </div>
-
-                                <div class="client-review-description">
-                                    <div class="client-rating">
-                                        <div class="category">Family Law</div>
-                                        <div class="rating">
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                            <span class="icon-star"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="review-description">
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ligula sed turpis sollicitudin fringilla. Vestibulum fermentum justo dui. Donec id ullamcorper lacus, ut accumsan orci</p>
-                                    </div>
-
-                                    <div class="view-more">
-                                        <span>Read Review</span>
-                                        <span class="icon-book"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="client-reviews" client-reviews=""></div>
             </div>
         </div>
         `;
     }
+
+    render() {
+        clientReviewComponent.compile();
+
+        super.render();
+
+        this.findElement('[client-reviews]').appendChild(clientReviewComponent.domNode);
+    }
 }
 
 const homeComponent = new HomeComponent();
+homeComponent.compile();
 
 document.querySelector('#root').appendChild(homeComponent.domNode);
-homeComponent.compile();

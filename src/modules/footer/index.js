@@ -47,6 +47,6 @@ class FooterComponent extends Component {
 }
 
 const footerComponent = new FooterComponent();
+footerComponent.compile();
 
 document.querySelector('#root').appendChild(footerComponent.domNode);
-footerComponent.compile();
