@@ -594,3 +594,90 @@ const LAW_SUBCATEGORY = [
         ]
     }
 ];
+
+const OTHER_LAW_CATEGORY = [
+    {
+        description: 'Abuse (Child, Domestic, Sexual)'
+    },
+    {
+        description: 'Loremipsum Dolorsitamet'
+    },
+    {
+        description: 'Agencies & Administration'
+    },
+    {
+        description: 'Lonsecteur Scingelit (Baseerekj, Mereit)'
+    },
+    {
+        description: 'Automobile ( DUI, Crimes, Speeding )'
+    },
+    {
+        description: 'Miam Euvelit'
+    },
+    {
+        description: 'Automobiles ( Accidents, Insurance )'
+    },
+    {
+        description: 'Mempor Auctor (Estiarma, Toeruslej)'
+    },
+    {
+        description: 'Banking ( Business, Consumer )'
+    },
+    {
+        description: 'Nisultricies Dictumest.'
+    },
+    {
+        description: 'Bars & Restaurants'
+    },
+    {
+        description: 'Ntfring Sodalelit (Aeeticl Restoustoust)'
+    },
+    {
+        description: 'Business Formation & Dissolution'
+    },
+    {
+        description: 'Ntvarius Lectus & Congue'
+    },
+    {
+        description: 'Children (Adoption, Custody, Support)'
+    },
+    {
+        description: 'Pellentesque'
+    },
+    {
+        description: 'Class Actions (Bad Drugs, Products)'
+    },
+    {
+        description: 'Rigula Aliquamanttis (Nestusotu, Wewreist)'
+    },
+    {
+        description: 'Commercial Law and Contracts'
+    },
+    {
+        description: 'Set Tigulempor'
+    },
+    {
+        description: 'Commercial Real Estate'
+    },
+    {
+        description: 'Sehicula Sedsitamet'
+    },
+    {
+        description: 'Constitutional Law'
+    },
+    {
+        description: 'Seque Nesturre'
+    },
+    {
+        description: 'Construction (Disputes, Liens)'
+    },
+    {
+        description: 'Tollis Gaurissed'
+    },
+    {
+        description: 'Categories Item Here'
+    },
+    {
+        description: 'Tempo Auctor (Estiarma, Toeruslej)'
+    }
+];

@@ -24,5 +24,7 @@ const TRANSLATIONS = {
     'review.clientReviews': 'Clients review LegalMatch lawyers',
     'review.modal.clientReviews': 'CLIENT REVIEWS',
     'modal.category.findALawyer': 'FIND A LAWYER NOW',
-    'modal.category.heading': 'Which __category__ issue(s) apply to your case?'
+    'modal.category.heading': 'Which __category__ issue(s) apply to your case?',
+    'modal.category.other': 'OTHER CATEGORIES',
+    'modal.category.chooseCategory': 'Choose the category that best fits your case'
 };

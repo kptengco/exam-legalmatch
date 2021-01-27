@@ -1,8 +1,13 @@
+.modal-category-component .list,
 .modal-sub-category-component .list {
     display: grid;
     font-weight: 600;
     grid-template-columns: auto auto;
     grid-row-gap: 1em;
+}
+
+.modal-category-component .list {
+    grid-column-gap: 4em;
 }
 
 .modal-sub-category-component .list-item label {
@@ -51,4 +56,26 @@
 .modal-sub-category-component .btn-actions {
     margin: 50px auto 10px;
     text-align: center;
+}
+
+.modal-category-component .heading {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 0 30px;
+}
+
+.modal-category-component .heading .heading-label {
+    display: block;
+    line-height: 1;
+}
+
+.modal-category-component .heading .heading-sub-label {
+    color: var(--secondary-light-text-color);
+    font-size: 14px;
+    line-height: 1;
+}
+
+.modal-category-component .category-link {
+    color: var(--accent-medium-color);
+    text-decoration: none;
 }

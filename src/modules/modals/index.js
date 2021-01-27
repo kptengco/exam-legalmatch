@@ -1,12 +1,49 @@
 class ModalCategoryComponent extends Component {
     
+    constructor() {
+        super();
+
+        this.list = OTHER_LAW_CATEGORY;
+    }
+
     get componentSelector() {
         return 'modal-category-component';
     }
 
+    get translate() {
+        return TRANSLATIONS;
+    }
+
     get template() {
+        if (!this.list.length) {
+            return '';
+        }
+
+        const rootDiv = document.createElement('div');
+        rootDiv.classList.add('list');
+
+        for (let index = 0; index < this.list.length; index++) {
+            const item = this.list[index];
+
+            const div = document.createElement('div');
+
+            div.classList.add('list-item');
+            div.innerHTML = `
+                <a href="" class="category-link">
+                    <span>${item.description}</span>
+                </a>
+            `;
+
+            rootDiv.appendChild(div);
+        }
+
         return `
-        
+            <div class="heading">
+                <span class="heading-label">${this.translate['modal.category.other']}</span>
+                <span class="heading-sub-label">${this.translate['modal.category.chooseCategory']}</span>
+            </div>
+
+            ${rootDiv.outerHTML}
         `;
     }
 }
