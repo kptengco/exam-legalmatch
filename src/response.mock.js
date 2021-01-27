@@ -180,3 +180,417 @@ const REVIEW = {
         }
     ]
 };
+
+const LAW_CATEGORY = [
+    {
+        id: '18963ffb-9eec-430f-9183-b78a2e9d2c82',
+        description: 'Family',
+    },
+    {
+        id: '89f5e27f-061b-48fa-bee1-fadbf9632876',
+        description: 'Criminal Defense'
+    },
+    {
+        id: 'b6e79898-10e9-4c56-a866-f7a6a9a082ff',
+        description: 'Business'
+    },
+    {
+        id: '3d999f62-83da-4f12-b971-d20d1fa6ef4f',
+        description: 'Personal Injury'
+    },
+    {
+        id: '32f15a42-44e3-4b1d-a5d0-a4be81800895',
+        description: 'Bankruptcy & Finances'
+    },
+    {
+        id: 'c63e534e-dee6-4fa1-843b-b9993f2f66f7',
+        description: 'Products & Services'
+    },
+    {
+        id: 'a8c76572-1ff7-49e5-88d3-edad782e6da3',
+        description: 'Employment'
+    },
+    {
+        id: '071f9584-b94e-4770-bf21-738fb288d26c',
+        description: 'Real Estate'
+    },
+    {
+        id: '60e70a6f-745b-4b62-a1dd-e673a55e94ef',
+        description: 'Immigration'
+    },
+    {
+        id: 'f54f70a3-f26d-4f93-8ad7-80c3a29075ef',
+        description: 'Wills, Trusts & Estates'
+    },
+    {
+        id: '231fead4-f75a-4a50-8a81-8a753830b75b',
+        description: 'Government'
+    },
+    {
+        id: 'a905fe15-f06d-41be-90cf-6123fb309b70',
+        description: 'Intellectual Property'
+    }
+];
+
+const LAW_SUBCATEGORY = [
+    {
+        id: '18963ffb-9eec-430f-9183-b78a2e9d2c82',
+        category: 'Family',
+        list: [
+            {
+                description: 'Adoptions'
+            },
+            {
+                description: 'Child Support'
+            },
+            {
+                description: 'Guardianship'
+            },
+            {
+                description: 'Separations'
+            },
+            {
+                description: 'Child Custody and Visitation'
+            },
+            {
+                description: 'Divorce'
+            },
+            {
+                description: 'Paternity'
+            },
+            {
+                description: 'Spousal Support or Ailmony'
+            }
+        ]
+    },
+    {
+        id: '89f5e27f-061b-48fa-bee1-fadbf9632876',
+        category: 'Criminal Defense',
+        list: [
+            {
+                description: 'Neque'
+            },
+            {
+                description: 'Porro'
+            },
+            {
+                description: 'Quisquam'
+            },
+            {
+                description: 'Est'
+            },
+            {
+                description: 'Qui'
+            },
+            {
+                description: 'Dolorem'
+            },
+            {
+                description: 'Ipsum'
+            },
+            {
+                description: 'Quia'
+            }
+        ]
+    },
+    {
+        id: 'b6e79898-10e9-4c56-a866-f7a6a9a082ff',
+        category: 'Business',
+        list: [
+            {
+                description: 'Lorem'
+            },
+            {
+                description: 'Ipsum'
+            },
+            {
+                description: 'Dolor'
+            },
+            {
+                description: 'Sit'
+            },
+            {
+                description: 'Amet'
+            },
+            {
+                description: 'Consectetur'
+            },
+            {
+                description: 'Adipiscing'
+            },
+            {
+                description: 'Elit'
+            }
+        ]
+    },
+    {
+        id: '3d999f62-83da-4f12-b971-d20d1fa6ef4f',
+        category: 'Personal Injury',
+        list: [
+            {
+                description: 'Suspendisse'
+            },
+            {
+                description: 'A Quam'
+            },
+            {
+                description: 'Ut Felis'
+            },
+            {
+                description: 'Pharetra'
+            },
+            {
+                description: 'Rhoncus'
+            },
+            {
+                description: 'Vestibulum'
+            },
+            {
+                description: 'Turpis'
+            },
+            {
+                description: 'Augue'
+            }
+        ]
+    },
+    {
+        id: '32f15a42-44e3-4b1d-a5d0-a4be81800895',
+        category: 'Bankruptcy & Finances',
+        list: [
+            {
+                description: 'Egestas'
+            },
+            {
+                description: 'Sed Tincidunt Id'
+            },
+            {
+                description: 'Ultricies'
+            },
+            {
+                description: 'Sit Amet Augue'
+            },
+            {
+                description: 'Proin'
+            },
+            {
+                description: 'Faucibus'
+            },
+            {
+                description: 'Ligula'
+            },
+            {
+                description: 'Ac Lobortis'
+            }
+        ]
+    },
+    {
+        id: 'c63e534e-dee6-4fa1-843b-b9993f2f66f7',
+        category: 'Products & Services',
+        list: [
+            {
+                description: 'Lacinia'
+            },
+            {
+                description: 'Posuere'
+            },
+            {
+                description: 'Ante'
+            },
+            {
+                description: 'Primis'
+            },
+            {
+                description: 'Orci'
+            },
+            {
+                description: 'Luctus'
+            },
+            {
+                description: 'Cubilia'
+            },
+            {
+                description: 'Curae'
+            }
+        ]
+    },
+    {
+        id: 'a8c76572-1ff7-49e5-88d3-edad782e6da3',
+        category: 'Employment',
+        list: [
+            {
+                description: 'Donec'
+            },
+            {
+                description: 'At Lacus Augue'
+            },
+            {
+                description: 'Proin Quis'
+            },
+            {
+                description: 'Diam Nec'
+            },
+            {
+                description: 'Lacus Euismod'
+            },
+            {
+                description: 'Hendrerit'
+            },
+            {
+                description: 'Nec Id Quam'
+            },
+            {
+                description: 'Donec Semper'
+            }
+        ]
+    },
+    {
+        id: '071f9584-b94e-4770-bf21-738fb288d26c',
+        category: 'Real Estate',
+        list: [
+            {
+                description: 'Neque'
+            },
+            {
+                description: 'Sed Quam Vehicula'
+            },
+            {
+                description: 'Gravida'
+            },
+            {
+                description: 'Mollis'
+            },
+            {
+                description: 'Metus'
+            },
+            {
+                description: 'Pellentesque'
+            },
+            {
+                description: 'Proin Vulputate'
+            },
+            {
+                description: 'Sollicitudin'
+            }
+        ]
+    },
+    {
+        id: '60e70a6f-745b-4b62-a1dd-e673a55e94ef',
+        category: 'Immigration',
+        list: [
+            {
+                description: 'Maecenas'
+            },
+            {
+                description: 'Iaculis'
+            },
+            {
+                description: 'Pharetra'
+            },
+            {
+                description: 'Sodales'
+            },
+            {
+                description: 'Curabitur'
+            },
+            {
+                description: 'Metus Turpis'
+            },
+            {
+                description: 'Sagittis'
+            },
+            {
+                description: 'Vitae'
+            }
+        ]
+    },
+    {
+        id: 'f54f70a3-f26d-4f93-8ad7-80c3a29075ef',
+        category: 'Wills, Trusts & Estates',
+        list: [
+            {
+                description: 'Vulputate'
+            },
+            {
+                description: 'Quis'
+            },
+            {
+                description: 'Dapibus'
+            },
+            {
+                description: 'Non Mauris'
+            },
+            {
+                description: 'Maecenas Rhoncus'
+            },
+            {
+                description: 'Bibendum'
+            },
+            {
+                description: 'Aenean'
+            },
+            {
+                description: 'Feugiat'
+            }
+        ]
+    },
+    {
+        id: '231fead4-f75a-4a50-8a81-8a753830b75b',
+        category: 'Government',
+        list: [
+            {
+                description: 'Id Diam Vitae'
+            },
+            {
+                description: 'Blandit'
+            },
+            {
+                description: 'In Tincidunt'
+            },
+            {
+                description: 'Tellus'
+            },
+            {
+                description: 'Vehicula Libero'
+            },
+            {
+                description: 'Malesuada'
+            },
+            {
+                description: 'Placerat'
+            },
+            {
+                description: 'Integer'
+            }
+        ]
+    },
+    {
+        id: 'a905fe15-f06d-41be-90cf-6123fb309b70',
+        category: 'Intellectual Property',
+        list: [
+            {
+                description: 'Malesuada Est Vitae'
+            },
+            {
+                description: 'Ipsum Cursus Cursus'
+            },
+            {
+                description: 'Vivamus'
+            },
+            {
+                description: 'Scelerisque'
+            },
+            {
+                description: 'Morbi'
+            },
+            {
+                description: 'Risus'
+            },
+            {
+                description: 'Congue'
+            },
+            {
+                description: 'Magna'
+            }
+        ]
+    }
+];

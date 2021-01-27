@@ -1,11 +1,32 @@
 class HomeComponent extends Component {
 
+    constructor() {
+        super();
+
+        const locationMapper = LOCATIONS.results.map(item => {
+            item.location = `${item.placeName}, ${item.postalCode}`
+
+            return item;
+        });
+        this.autocompleteComponent = new AutocompleteComponent(locationMapper, 'location');
+        this.dropdownComponent = new DropdownComponent(LAW_CATEGORY, 'description');
+        this.dropdownComponent.compile();
+    }
+
     get componentSelector() {
         return 'home-component';
     }
 
     get translate() {
         return TRANSLATIONS;
+    }
+
+    get autocompleteNode() {
+        return this.findElement('[autocomplete-outlet]');
+    }
+
+    get dropdownNode() {
+        return this.findElement('[dropdown]');
     }
 
     get template() {
@@ -27,11 +48,12 @@ class HomeComponent extends Component {
                         <div class="quick-input-container">
                             <div class="quick-input-label">1</div>
                             <div class="quick-input">
+                                <span class="input-label">${this.translate['home.findLocationLabel']}</span>
                                 <input type="text"
-                                    class="input"
-                                    placeholder="${this.translate['home.findLocationLabel']}"
+                                    class="input input-find-location"
                                     maxlength="50" />
                             </div>
+                            <div autocomplete-outlet="" class="autocomplete-container"></div>
                         </div>
                     </div>
 
@@ -39,13 +61,13 @@ class HomeComponent extends Component {
                         <p class="quick-input-helper">
                             <label>${this.translate['home.chooseCategory']}</label>
                         </p>
-                        <div class="quick-input-container">
+                        <div class="quick-input-container dropdown" dropdown="">
                             <div class="quick-input-label">2</div>
-                            <div class="quick-input">
-                                <input type="text"
-                                    class="input"
-                                    placeholder="${this.translate['home.chooseCategoryLabel']}"
-                                    maxlength="50" />
+                            <div class="quick-input select">
+                                <span class="input-label">${this.translate['home.chooseCategoryLabel']}</span>
+                                <input type="button"
+                                    class="input input-find-category" />
+                                <span class="icon-down-open"></span>
                             </div>
                         </div>
                     </div>
@@ -73,6 +95,56 @@ class HomeComponent extends Component {
         super.render();
 
         this.findElement('[client-reviews]').appendChild(clientReviewComponent.domNode);
+
+        this.autocompleteComponent.onClick(item => {
+            this.findElement('.input-find-location').value = item.location;
+        });
+
+        this.dropdownComponent.onClick(item => {
+            this.dropdownComponent.detach();
+            this.dropdownNode.querySelector('.input-label').classList.add('hide');
+            this.findElement('.input-find-category').value = item.description;
+
+            const modalSubCategoryComponent = new ModalSubCategoryComponent(item.id);
+            modalSubCategoryComponent.compile();
+
+            modalComponent.open({
+                footerActions: false,
+                componentNode: modalSubCategoryComponent.domNode
+            });
+        });
+
+        this.findElement('.input-find-location').addEventListener('keyup', event => {
+            const placeholder = event.target.parentNode.querySelector('.input-label');
+            const value = event.currentTarget.value.trim();
+
+            this.autocompleteComponent.detach();
+
+            placeholder.classList.toggle('hide', value);
+
+            if (value) {
+                this.autocompleteComponent.findItem(event.currentTarget.value, ['location']);
+                this.autocompleteNode.appendChild(this.autocompleteComponent.domNode);
+            }
+        });
+
+        this.findElement('.input-find-location').addEventListener('blur', () => {
+            // @README: hack for now
+            setTimeout(() => {
+                this.autocompleteComponent.detach();
+            }, 100);
+        });
+
+        this.findElement('.input-find-category').addEventListener('click', event => {
+            this.dropdownNode.appendChild(this.dropdownComponent.domNode);
+        });
+
+        this.findElement('.input-find-category').addEventListener('blur', () => {
+            // @README: hack for now
+            setTimeout(() => {
+                this.dropdownComponent.detach();
+            }, 100);
+        });
     }
 }
 

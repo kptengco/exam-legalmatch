@@ -1,0 +1,17 @@
+.autocomplete-component {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-text-color);
+    max-height: 300px;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+
+.autocomplete-component .list .list-item {
+    cursor: pointer;
+}
+
+.autocomplete-component .list-item .highlight {
+    color: var(--accent-color);
+}

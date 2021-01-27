@@ -1,10 +1,13 @@
 @import url('../themes/default.css');
+@import url('components/autocomplete/index.css');
+@import url('components/dropdown/index.css');
 @import url('components/rating/index.css');
 @import url('components/modal/index.css');
 @import url('modules/header/index.css');
 @import url('modules/footer/index.css');
 @import url('modules/review/index.css');
 @import url('modules/home/index.css');
+@import url('modules/modals/index.css');
 
 body, html {
     color: var(--secondary-text-color);
@@ -19,4 +22,8 @@ body, html {
 p {
     margin: 0;
     padding: 0;
+}
+
+.hide {
+    display: none !important;
 }

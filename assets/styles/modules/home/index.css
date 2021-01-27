@@ -67,11 +67,14 @@
     border-radius: 6em;
     display: flex;
     margin: 7px 0;
-    position: relative;
+    position: relative; 
 }
 
 .home-component .quick-input-container .quick-input {
+    align-items: center;
+    display: flex;
     overflow: hidden;
+    position: relative;
     width: 100%;
 }
 
@@ -84,13 +87,42 @@
     position: absolute;
 }
 
+.home-component .quick-input .input-label {
+    color: var(--tertiary-strong-text-color);
+    font-weight: 600;
+    position: absolute;
+    padding-left: 60px;
+    z-index: 1;
+}
+
 .home-component .quick-input .input {
     background-color: transparent;
     border: 0;
+    color: var(--secondary-light-text-color);
+    font-size: 16px;
     outline: none;
-    padding: 22px;
+    padding: 20px 22px;
+    text-align: left;
     text-indent: 40px;
     width: inherit;
+    z-index: 2;
+}
+
+.home-component .quick-input.select {
+    display: flex;
+    color: var(--tertiary-strong-text-color);
+    font-weight: 600;
+}
+
+.home-component .quick-input.select .select-label {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.home-component .quick-input.select .icon-down-open {
+    position: absolute;
+    right: 20px;
+    z-index: 1;
 }
 
 .home-component .home-container .find-category-helper {
@@ -103,6 +135,10 @@
     color: var(--secondary-text);
 }
 
+.home-component .find-category-helper .quick-input-helper {
+    padding: 10px 0 0;
+}
+
 .home-component .home-container .client-reviews {
     padding: 0 0 0 20px;
 }
@@ -111,6 +147,22 @@
     font-size: 20px;
     font-weight: 600;
     padding: 0 15px;
+}
+
+.home-component .autocomplete-component {
+    font-weight: 600;
+    left: 40px;
+    top: 60px;
+}
+
+.home-component .autocomplete-component .list {
+    list-style: none;
+    margin: 0;
+    padding: 10px 30px;
+}
+
+.home-component .dropdown-component {
+    top: 65px;
 }
 
 @media (max-width: 1100px) {
