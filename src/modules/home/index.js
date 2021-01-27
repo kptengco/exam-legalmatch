@@ -135,7 +135,7 @@ class HomeComponent extends Component {
             }, 100);
         });
 
-        this.findElement('.input-find-category').addEventListener('click', event => {
+        this.findElement('.input-find-category').addEventListener('click', () => {
             this.dropdownNode.appendChild(this.dropdownComponent.domNode);
         });
 
@@ -144,6 +144,17 @@ class HomeComponent extends Component {
             setTimeout(() => {
                 this.dropdownComponent.detach();
             }, 100);
+        });
+
+        this.findElement('.all-category').addEventListener('click', () => {
+            const modalCategoryComponent = new ModalCategoryComponent();
+            modalCategoryComponent.compile();
+
+            modalComponent.open({
+                cssClasses: 'all-category',
+                footerActions: false,
+                componentNode: modalCategoryComponent.domNode
+            });
         });
     }
 }

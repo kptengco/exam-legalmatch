@@ -69,6 +69,7 @@ class ModalComponent extends Component {
             heading: '',
             componentNode: null,
             footerActions: true,
+            cssClasses: null,
             ...data
         };
 
@@ -81,6 +82,10 @@ class ModalComponent extends Component {
         this.attachTo.appendChild(this.domNode);
 
         this.compile();
+
+        if (this.data.cssClasses) {
+            this.findElement('.modal-container').classList.add(this.data.cssClasses);
+        }
 
         this.modalBodyNode.classList.toggle('footer-action', this.data.footerActions);
         this.findElement('.modal-footer').classList.toggle('hide', !this.data.footerActions);
