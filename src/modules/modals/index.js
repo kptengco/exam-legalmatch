@@ -29,7 +29,7 @@ class ModalCategoryComponent extends Component {
 
             div.classList.add('list-item');
             div.innerHTML = `
-                <a href="" class="category-link">
+                <a href="#" class="category-link">
                     <span>${item.description}</span>
                 </a>
             `;
